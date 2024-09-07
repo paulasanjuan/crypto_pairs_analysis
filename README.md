@@ -1,82 +1,79 @@
-# Proyecto de Python: Análisis de Cotizaciones y Oscilador Estocástico en Kraken
+# Price Analysis and Stochastic Oscillator on Kraken
 
-Las alumnas del máster en Big Data Science de la Universidad de Navarra Paula Sanjuan Campos e Inés Hernández Pastor hemos creado este proyecto cuyo objetivo principal es la descarga y visualización de cotizaciones para un par de monedas. Todo ello se logra mediante el uso de Python y Streamlit. 
+This project was created by Paula Sanjuan Campos and Inés Hernández Pastor, students of the Master's in Big Data Science at the University of Navarra. The main objective is to download and visualize price quotes for a currency pair using Python and Streamlit.
 
 
-## Herramientas utilizadas
+## Tools Used
 
 ### 1. Python
 
 ### 2. Kraken API
 
-La API de Kraken se utiliza para la descarga de datos de cotizaciones actualizados. 
+The Kraken API is used to download up-to-date price quotes.
 
 ### 3. Streamlit 
 
-La interfaz de usuario ha sido creada con Streamlit, una biblioteca de Python que facilita la creación de aplicaciones web interactivas. En nuestro caso particular, se permite seleccionar un par de criptomonedas entre seis posibles y visualizar las cotizaciones e indicadores. 
+The user interface has been created with Streamlit, a Python library that facilitates the creation of interactive web applications. In our case, users can select a cryptocurrency pair from six possible options and visualize the quotes and indicators.
 
-### 4. Entorno Virtual 
+### 4. Virtual Environment
 
-Hemos configurado un entorno virtual específico para este proyecto utilizando virtualenv. Esto asegura que las dependencias y versiones de las bibliotecas utilizadas sean coherentes y evita posibles conflictos con otros proyectos.
+We have configured a specific virtual environment for this project using virtualenv. This ensures that the dependencies and versions of the libraries used are consistent, avoiding potential conflicts with other projects.
 
 
 
-## Instrucciones de configuración
+## Setup Instructions
 
-### 1. Descarga desde GitHub
+### 1. Download from GitHub
 
-Desde GitHub el código se puede obtener de dos maneras: 
+There are two ways to obtain the code from GitHub:
 
-1. **Clonar el repositorio:**
+1. **Clone the repository:**
 
    ```bash
    git clone https://github.com/ihernandezp1/Proyecto_final_python_PaulaSanjuan_InesHernandez 
-   cd tu_proyecto
+   cd your_project
 
-2. **Descargar el .zip**
+2. **Download the .zip file**
 
-    Se extraen los archivos de la carpeta comprimida
-    'Proyecto_final_python_PaulaSanjuan_InesHernandez-main'. Se entra a la carpeta del proyecto desde la terminal y se configura el entorno virtual, como se indica en el siguiente apartado. 
+    Extract the files from the compressed folder
+    'Proyecto_final_python_PaulaSanjuan_InesHernandez-main'. Navigate to the project folder from the terminal and configure the virtual environment as indicated in the next section.
 
 
-2. Configurar y activar el Entorno Virtual
+2. Configure and Activate the Virtual Environment
 
     ```
-    # creación
+    # create the virtual environment
     virtualenv venv
-    # activación
-    # Para MacOs: 
+    # activation
+    # For MacOs: 
     source venv/bin/activate
-    # Para Windows:
+    # For Windows:
     venv/Scripts/activate
-3. Instalar dependencias 
+3. Install dependencies
 
     ```
     pip install -r requirements.txt
     streamlit run main.py
-## Funcionalidades Principales
+## Main Features
 
-### Interfaz de usuario
+### User Interface
 
-En la parte izquierda de la página que se abre en el navegador, se encuentra el Menú Principal y dentro de este, está el índice en el que se selecciona la pestaña que se quiere visualizar: 'Introducción', 'Cotizaciones' e 'Indicadores'. 
+On the left side of the page that opens in the browser, you will find the Main Menu, which includes the index to select the tab you want to view:  'Introduction', 'Prices', or 'Indicators'.
 
-### 1. Descarga de Cotizaciones
+### 1. Downloading Price Data
+The project allows you to download up-to-date price data from the Kraken platform for the currency pair selected by the user. The downloaded data will serve as the basis for further analysis.
 
-El proyecto permite descargar las cotizaciones actualizadas de la plataforma Kraken para el par de monedas seleccionado por el usuario. La información descargada será la base para el análisis posterior.
+In the 'Prices' view, you can select the pair to be represented.
 
-En la vista de 'Cotizaciones' se selecciona el par a representar.
+### 2. Price Movement Charts
+Once the price data has been downloaded, users can easily visualize the historical movement of the currency pair through a candlestick chart. This graphical representation will help identify patterns and trends in price behavior.
 
-### 2. Gráficas de Movimiento
+In the same 'Prices' view, once the pair is selected, you will see the candlestick chart, and below it, the DataFrame on which the representation is based.
 
-Una vez se hayan descargado las cotizaciones, se podrá visualizar fácilmente el movimiento histórico del par de monedas mediante un gráfico de velas. Esta representación gráfica facilitará la identificación de patrones y tendencias en el comportamiento de las cotizaciones.
+### 3. Stochastic Oscillator
+Additionally, the project includes the generation of charts for the stochastic oscillator, a widely used technical indicator in stock analysis. This tool provides signals on potential overbought or oversold conditions of the currency pair, helping to make informed decisions.
 
-En la misma vista de 'Cotizaciones', una vez se selecciona el par se puede observar directamente el gráfico de velas y justo debajo el Dataframe en el que se basa la representación. 
-
-### 3. Oscilador Estocástico
-
-Adicionalmente, el proyecto incluirá la generación de gráficas del oscilador estocástico, un indicador técnico ampliamente utilizado en el análisis bursátil. Esta herramienta proporcionará señales sobre la posible sobrecompra o sobreventa del par de monedas, ayudándonos a tomar decisiones informadas.
-
-El la vista de 'Indicadores' se selecciona de nuevo el par de monedas y se puede observar la cotización del par (precio de cierre en el tiempo), el indicador estocástico y la media móvil del estocástico. Además, se visualiza una gráfica combinada de los anteriores para visualizarlos de forma simultánea. Finalmente, se representa la cotización sobre su media móvil. 
+In the 'Indicators' view, users select the currency pair again to visualize the price data (closing price over time), the stochastic indicator, and the moving average of the stochastic. Additionally, a combined graph of these indicators is shown for simultaneous visualization. Finally, the price data is plotted over its moving average.
 
 
 
