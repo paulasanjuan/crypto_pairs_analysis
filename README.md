@@ -30,7 +30,7 @@ There are two ways to obtain the code from GitHub:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/ihernandezp1/Proyecto_final_python_PaulaSanjuan_InesHernandez 
+   git clone https://github.com/paulasanjuan/crypto_pairs_analysis.git
    cd your_project
 
 2. **Download the .zip file**
